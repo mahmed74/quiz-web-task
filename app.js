@@ -69,7 +69,7 @@ function check2() {
 }
 
 function check3() {
-    // var score = 0
+    // var score;
     var rightAns31 = document.getElementById('opt31')
     var rightAns32 = document.getElementById('opt32')
     var rightAns33 = document.getElementById('opt33')
@@ -84,6 +84,7 @@ function check3() {
 }
 
 function check4() {
+    // var score = 0
     var rightAns41 = document.getElementById('opt41')
     var rightAns42 = document.getElementById('opt42')
     var rightAns43 = document.getElementById('opt43')
@@ -96,14 +97,13 @@ function check4() {
     }
 }
 
-res = "<h1>Congrats your Score is " + score + " </h1>"
-gw = "<h2 class='welldone'>Well Done!</h2>"
+
 
 function result() {
     var question5 = document.getElementById('questionID')
-    question5.innerHTML = res;
+    question5.innerHTML = "<h1>Congrats your result is " + score + "</h1>";
     var option5 = document.getElementById('optionID')
-    option5.innerHTML = gw;
+    option5.innerHTML = "<h2>Well done</h2>";
     var btn = document.getElementById("btnext")
     btn.innerHTML = "";
 }
