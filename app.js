@@ -1,9 +1,15 @@
 ques2 = "<h3>At What point of projectile both Velocity and Acceleration are perpendiculalr to each other?<h3>"
 ques3 = "<h3>The velovity of projectile is ____ when its height is half of max height</h3>"
 ques4 = "<h3>what is the value of y component of velocity at max height?</h3>"
+ques5 = "<h3>what does RAM stand for?</h3>"
+ques6 = "<h3>What does CPU stand for?</h3>"
+ques7 = "<h3>Science is the study of?</h3>"
 optb = '<div class="opt11"> <input type="radio" name="opt1" id="opt21"> at max Height</div> <br><div class="opt12"> <input type="radio" name="opt22" id="opt1"> At launching point</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt23"> At target point</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt24"> Nowhere/input></div><br>'
 optc = '<div class="opt11"> <input type="radio" name="opt1" id="opt31"> 1/2 of Vo</div> <br><div class="opt12"> <input type="radio" name="opt1" id="opt32"> 7.4 of Vo</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt33">  3/4 of Vo</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt34"> 1/3 of Vo</input></div><br>'
 optd = '<div class="opt11"> <input type="radio" name="opt1" id="opt41"> 1/2 of initial</div> <br><div class="opt12"> <input type="radio" name="opt1" id="opt42"> zero</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt43"> more than initial</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt44"> less than initial</input></div><br>'
+opte = '<div class="opt11"> <input type="radio" name="opt1" id="opt51"> Random Access Memory</div> <br><div class="opt12"> <input type="radio" name="opt1" id="opt52"> Read Acllow Memory</div><br><div class="opt12"> <input type="radio" name="opt1" id="op543"> Both of them </div><br><div class="opt12"> <input type="radio" name="opt1" id="opt54"> None of them</input></div><br>'
+optf = '<div class="opt11"> <input type="radio" name="opt1" id="opt61"> Center point Unit</div> <br><div class="opt12"> <input type="radio" name="opt1" id="opt62"> Central Processing Unit</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt63"> none of them</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt64"> both of them</input></div><br>'
+optg = '<div class="opt11"> <input type="radio" name="opt1" id="opt71"> Nature</div> <br><div class="opt12"> <input type="radio" name="opt1" id="opt72"> Future</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt73"> change</div><br><div class="opt12"> <input type="radio" name="opt1" id="opt74"> none of them</input></div><br>'
 
 function next() {
     var question2 = document.getElementById('questionID')
@@ -31,8 +37,39 @@ function next3() {
     var option4 = document.getElementById('optionID')
     option4.innerHTML = optd;
     var btn = document.getElementById("btnext")
-    btn.innerHTML = '<button class="buttonNext" id="btnnext" onclick="check4(),result()" >Next</button>';
+    btn.innerHTML = '<button class="buttonNext" id="btnnext" onclick="check4(),next4()" >Next</button>';
 }
+
+
+function next4() {
+    var question5 = document.getElementById('questionID')
+    question5.innerHTML = ques5;
+    var option5 = document.getElementById('optionID')
+    option5.innerHTML = opte;
+    var btn = document.getElementById("btnext")
+    btn.innerHTML = '<button class="buttonNext" id="btnnext" onclick="check5(),next5()" >Next</button>';
+}
+
+function next5() {
+    var question6 = document.getElementById('questionID')
+    question6.innerHTML = ques6;
+    var option6 = document.getElementById('optionID')
+    option6.innerHTML = optf;
+    var btn = document.getElementById("btnext")
+    btn.innerHTML = '<button class="buttonNext" id="btnnext" onclick="check6(),next6()" >Next</button>';
+}
+
+function next6() {
+    var question6 = document.getElementById('questionID')
+    question6.innerHTML = ques6;
+    var option6 = document.getElementById('optionID')
+    option6.innerHTML = optf;
+    var btn = document.getElementById("btnext")
+    btn.innerHTML = '<button class="buttonNext" id="btnnext" onclick="result()" >Next</button>';
+}
+
+
+
 
 
 var score = 0
@@ -97,6 +134,48 @@ function check4() {
     }
 }
 
+
+function check5() {
+    // var score = 0
+    var rightAns51 = document.getElementById('opt51')
+    var rightAns52 = document.getElementById('opt52')
+    var rightAns53 = document.getElementById('opt53')
+    var rightAns54 = document.getElementById('opt44')
+    if (rightAns51.checked == true) {
+        score++
+        alert("Correct")
+    } else {
+        alert("Wrong")
+    }
+}
+
+function check6() {
+    // var score = 0
+    var rightAns61 = document.getElementById('opt61')
+    var rightAns62 = document.getElementById('opt62')
+    var rightAns63 = document.getElementById('opt63')
+    var rightAns64 = document.getElementById('opt64')
+    if (rightAns62.checked == true) {
+        score++
+        alert("Correct")
+    } else {
+        alert("Wrong")
+    }
+}
+
+function check7() {
+    // var score = 0
+    var rightAns71 = document.getElementById('opt71')
+    var rightAns72 = document.getElementById('opt72')
+    var rightAns73 = document.getElementById('opt73')
+    var rightAns74 = document.getElementById('opt74')
+    if (rightAns71.checked == true) {
+        score++
+        alert("Correct")
+    } else {
+        alert("Wrong")
+    }
+}
 
 
 function result() {
